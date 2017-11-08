@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Mickey Mouse Public Domain Countdown</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <header class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Mickey Mouse Public Domain Countdown</h3>
+            </div>
+          </header>
+
+          <main role="main" class="inner cover">
+            <h1 class="cover-heading">Months and days until Mickey Mouse goes public domain.</h1>
+            <p class="lead">Or until US copyright law gets extended again (since you know Disney won't relent so easily).</p>
+            <p class="lead">
+	<div class="btn btn-lg btn-secondary" data-toggle="tooltip" data-placement="top" title="That's on January 1st 2024!">
+      <div class="panel-body">
+        <div class="lead" id="clock"></div>
+      </div>
+    </div>
+            </p>
+          </main>
+
+          <footer class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>. Text adjusted by <a href="https://twitter.com/ev1l0rd">@ev1l0rd</a>. jQuery.countdown by <a href="https://github.com/hilios">@hilios</a>. Page hosted with GitHub pages. Source is available at <a href="https://github.com/ev1l0rd/mickey-countdown">ev1l0rd/mickey-countdown</a></p>
+            </div>
+          </footer>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <script src="js/jquery.countdown/jquery.countdown.min.js"></script>
+<script type="text/javascript">
+  // Turn on Bootstrap
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // 15 days from now!
+  function countdownEnds() {
+    return new Date(2024,0,1);
+  }
+
+  var $clock = $('#clock');
+
+  $clock.countdown(countdownEnds(), function(event) {
+    $(this).html(event.strftime('%m month%!m and %n day%!n left.'));
+  });
+
+</script>
+  </body>
+</html>
+
